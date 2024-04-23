@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body style="background-color: darkcyan;">
+    <form action="/" method="POST">
+            <input type="text" name="text" placeholder="Enter a text">
+            <br><br>
+            <input type = "text" name = "patterns" placeholder="Enter regex pattern">
+            <br><br>
+            <button>"submit"</button>
+        </form>
+        <ul>
+            {% for match in matches %}
+                <li>{{ match }}</li>
+            {% endfor %}
+        </ul>
+        <form action="/email" method="POST">
+        <input type="text" name="email" placeholder="Enter your email">
+        <br><br>
+        <button>"submit"</button>
+        </form>
+</body>
+</html>
